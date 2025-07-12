@@ -49,7 +49,7 @@ const blogPosts = [
     guestName: "Couple Rabby Bumba",
     guestQRCode: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752115767/Weeding%20Baka/qr-code_1_dzs5lg.png",
     guestCard: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752227302/Weeding%20Baka/Guest-Done/GuestCouple_Rabby_iulbrn.png",
-    guestTable: "Faith"
+    guestTable: "Faith 1"
   },
 
   {
