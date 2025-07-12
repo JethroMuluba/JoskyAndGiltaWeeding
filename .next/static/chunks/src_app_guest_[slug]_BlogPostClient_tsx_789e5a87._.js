@@ -91,7 +91,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "mb-3",
-                                    children: "C'est avec beaucoup d'émotions que Gustave et Clavina vous convient à leur soirée dansante"
+                                    children: "C'est avec beaucoup d'émotions que Josky et Gilta vous convient à leur soirée dansante"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
                                     lineNumber: 61,
@@ -99,7 +99,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "mb-3",
-                                    children: "Le vendredi 25 juillet 2025 à 19h00."
+                                    children: "Le vendredi 08 août 2025 à 19h00."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
                                     lineNumber: 65,
@@ -110,7 +110,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "mb-2",
-                                            children: "L'événement aura lieu dans la magnifique Salle de fête Turbant Tower sise 169, Avenue Lowa, Q/Ngwaka, C/Kinshasa."
+                                            children: "L'événement aura lieu dans la magnifique Salle de fête Stina sise 45 dans la commune de Kasa-Vubu."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
                                             lineNumber: 71,
@@ -118,7 +118,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "mb-3",
-                                            children: "Réf. Huilerie en diagonale de Camp Lufungula."
+                                            children: "Réf. Croisement des avenues Gambela et Popokabaka."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
                                             lineNumber: 75,
@@ -140,7 +140,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "mb-2",
-                                    children: "+243 999 859 282 | +243 829 915 672"
+                                    children: "+243 997 103 857 | +243 824 208 889"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
                                     lineNumber: 84,
@@ -187,6 +187,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     href: post.guestCard,
+                                    target: "blank",
                                     download: true,
                                     className: "bg-[#c49344] hover:bg-[#9e793c] px-6 py-2 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2 mb-10",
                                     children: [

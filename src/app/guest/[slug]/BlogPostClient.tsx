@@ -59,21 +59,21 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
 
         <div className='flex flex-col justify-center items-center text-[14px]'>
           <p className='mb-3'>
-            C&apos;est avec beaucoup d&apos;émotions que Gustave et Clavina vous convient à leur soirée dansante
+            C&apos;est avec beaucoup d&apos;émotions que Josky et Gilta vous convient à leur soirée dansante
           </p>
 
           <p className='mb-3'>
-            Le vendredi 25 juillet 2025 à 19h00. 
+            Le vendredi 08 août 2025 à 19h00. 
           </p>
 
 
           <div className='flex flex-col justify-center items-center'>
             <p className='mb-2'>
-              L&apos;événement aura lieu dans la magnifique Salle de fête Turbant Tower sise 169, Avenue Lowa, Q/Ngwaka, C/Kinshasa.
+              L&apos;événement aura lieu dans la magnifique Salle de fête Stina sise 45 dans la commune de Kasa-Vubu.
             </p>
 
             <p className='mb-3'>
-              Réf. Huilerie en diagonale de Camp Lufungula.
+              Réf. Croisement des avenues Gambela et Popokabaka.
             </p>
           </div>
 
@@ -82,7 +82,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
           </p>
 
           <p className='mb-2'>
-          +243 999 859 282 | +243 829 915 672
+          +243 997 103 857 | +243 824 208 889
           </p>
 
           <p className='mb-2'>
@@ -104,7 +104,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
                   className="w-15 h-15 object-cover rounded-lg transition-transform duration-600 hover:scale-110"
                 />
 
-          <Link href={post.guestCard} download className="bg-[#c49344] hover:bg-[#9e793c] px-6 py-2 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2 mb-10">
+          <Link href={post.guestCard} target='blank' download className="bg-[#c49344] hover:bg-[#9e793c] px-6 py-2 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2 mb-10">
                 <span className='text-xs'>TELECHARGEZ ICI</span>
                 <Download  className="w-5 h-5 animate-bounce" />
           </Link>

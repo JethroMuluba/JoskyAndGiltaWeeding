@@ -85,7 +85,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ScrollT
 ;
 ;
 const metadata = {
-    title: "Mariage de Gustave et Clavina (B de B)",
+    title: "Mariage de Josky et Gilta",
     description: "Aujourd'hui, nous unissons nos cœurs pour la vie, et c'est avec émotion que vous assistez à la naissance d'un nouveau chapitre plein d'amour, de complicité et de promesses."
 };
 function RootLayout({ children }) {
