@@ -495,7 +495,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
         margin: "-100px"
     });
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-        className: "min-h-screen bg-[#6f3d2c] flex flex-col",
+        className: "min-h-screen bg-[#6f3d2c] flex flex-col md:items-center",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].section, {
                 initial: {
@@ -519,7 +519,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                     ],
                     delay: 0.5
                 },
-                className: "bg-no-repeat overflow-hidden flex justify-between items-center h-[926px]   ",
+                className: "bg-no-repeat overflow-hidden items-center h-[926px] md:w-[428px]    ",
                 style: {
                     backgroundImage: `url(${getTemplate01})`,
                     backgroundSize: 'cover',
@@ -543,7 +543,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                 transition: {
                     duration: 1.5
                 },
-                className: "bg-no-repeat overflow-hidden  h-[926px]  px-8 ",
+                className: "bg-no-repeat overflow-hidden  h-[926px] md:w-[428px] px-8 ",
                 style: {
                     backgroundImage: `url(${getTemplate02})`,
                     backgroundSize: 'cover',
@@ -765,7 +765,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                         duration: 4.5,
                                         ease: "easeOut"
                                     },
-                                    className: "mb-23",
+                                    className: "mb-23 md:mb-28",
                                     children: [
                                         "Table : ",
                                         post.guestTable
@@ -867,7 +867,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                 transition: {
                     duration: 1.5
                 },
-                className: " bg-no-repeat overflow-hidden h-[926px]",
+                className: " bg-no-repeat overflow-hidden h-[926px] md:w-[428px]",
                 style: {
                     backgroundImage: `url(${getTemplate02})`,
                     backgroundSize: 'cover',

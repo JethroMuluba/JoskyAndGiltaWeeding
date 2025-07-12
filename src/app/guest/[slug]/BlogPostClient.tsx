@@ -36,7 +36,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
   const isInViewGoldenBook = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <main className="min-h-screen bg-[#6f3d2c] flex flex-col">
+    <main className="min-h-screen bg-[#6f3d2c] flex flex-col md:items-center">
       <motion.section 
                           initial={{ scale: 0, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
@@ -48,7 +48,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
                                 ease: [0, 0.71, 0.2, 1.01],
                                 delay: 0.5
                             }}
-      className="bg-no-repeat overflow-hidden flex justify-between items-center h-[926px]   "
+      className="bg-no-repeat overflow-hidden items-center h-[926px] md:w-[428px]    "
       style={{ backgroundImage: `url(${getTemplate01})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
     </motion.section>
@@ -58,7 +58,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
-      className="bg-no-repeat overflow-hidden  h-[926px]  px-8 "
+      className="bg-no-repeat overflow-hidden  h-[926px] md:w-[428px] px-8 "
       style={{ backgroundImage: `url(${getTemplate02})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div ref={ref} className=' text-white text-center flex flex-col justify-center items-center  pt-16'>
@@ -134,7 +134,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
                                                                             initial={{ x: 100, opacity: 0 }}
                                                                             animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
                                                                             transition={{ duration: 4.5, ease: "easeOut" }}
-          className='mb-23'>
+          className='mb-23 md:mb-28'>
             Table : {post.guestTable}
           </motion.p>
 
@@ -169,7 +169,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
-      className=" bg-no-repeat overflow-hidden h-[926px]"
+      className=" bg-no-repeat overflow-hidden h-[926px] md:w-[428px]"
       style={{ backgroundImage: `url(${getTemplate02})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div ref={refGoldenBook} className=' text-white text-center flex flex-col justify-center pt-16'>
