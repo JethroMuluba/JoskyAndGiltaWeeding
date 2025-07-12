@@ -6,6 +6,8 @@ import Image from "next/image"
 import { Download } from "lucide-react"
 import Link from "next/link"
 import { useRef } from 'react'
+import ContactForm from '@/components/contactForm'
+
 
 
 
@@ -30,6 +32,9 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const refGoldenBook = useRef(null);
+  const isInViewGoldenBook = useInView(ref, { once: true, margin: "-100px" });
+
   return (
     <main className="min-h-screen bg-[#6f3d2c] flex flex-col">
       <motion.section 
@@ -41,7 +46,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
                                 damping: 80,
                                 duration: 1, 
                                 ease: [0, 0.71, 0.2, 1.01],
-                                delay: 1
+                                delay: 0.5
                             }}
       className="bg-no-repeat overflow-hidden flex justify-between items-center h-[926px]   "
       style={{ backgroundImage: `url(${getTemplate01})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -60,50 +65,86 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
         <motion.h2 
                                   initial={{ x: 100, opacity: 0 }}
                                   animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
-                                  transition={{ duration: 1, ease: "easeOut" }}
+                                  transition={{ duration: 0.5, ease: "easeOut" }}
         className='text-2xl mb-17'>
             {post.guestName}
         </motion.h2>
 
         <div className='flex flex-col justify-center items-center text-[16px]'>
-          <motion.p className='mb-7'>
+          <motion.p 
+                                            initial={{ x: -100, opacity: 0 }}
+                                            animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
+                                            transition={{ duration: 1, ease: "easeOut" }}
+          className='mb-7'>
             C&apos;est avec beaucoup d&apos;émotions que Josky et Gilta vous convient à leur soirée dansante
           </motion.p>
 
-          <motion.p className='mb-7'>
+          <motion.p 
+                                            initial={{ x: 100, opacity: 0 }}
+                                  animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+                                  transition={{ duration: 1.5, ease: "easeOut" }}
+          className='mb-7'>
             Le vendredi 08 août 2025 à 19h00. 
           </motion.p>
 
 
           <div className='flex flex-col justify-center items-center'>
-            <motion.p className='mb-4'>
+            <motion.p 
+                                                        initial={{ x: -100, opacity: 0 }}
+                                                        animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
+                                                        transition={{ duration: 2, ease: "easeOut" }}
+            className='mb-4'>
               L&apos;événement aura lieu dans la magnifique Salle de fête Stina sise 45 dans la commune de Kasa-Vubu.
             </motion.p>
 
-            <motion.p className='mb-7'>
+            <motion.p 
+                                                        initial={{ x: 100, opacity: 0 }}
+                                                        animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+                                                        transition={{ duration: 2.5, ease: "easeOut" }}
+            className='mb-7'>
               Réf. Croisement des avenues Gambela et Popokabaka.
             </motion.p>
           </div>
 
-          <motion.p className='mb-7'>
+          <motion.p 
+                                                                  initial={{ x: -100, opacity: 0 }}
+                                                                  animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
+                                                                  transition={{ duration: 3, ease: "easeOut" }}
+          className='mb-7'>
             Pour plus d’infos contactez :
           </motion.p>
 
-          <motion.p className='mb-7'>
+          <motion.p 
+                                                                  initial={{ x: 100, opacity: 0 }}
+                                                                  animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+                                                                  transition={{ duration: 3.5, ease: "easeOut" }}
+          className='mb-7'>
           +243 997 103 857 | +243 824 208 889
           </motion.p>
 
-          <motion.p className='mb-7'>
+          <motion.p 
+                                                                            initial={{ x: -100, opacity: 0 }}
+                                                                            animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
+                                                                            transition={{ duration: 4, ease: "easeOut" }}
+          className='mb-7'>
             Cordiale Bienvenue 🌸
           </motion.p>
 
-          <motion.p className='mb-23'>
+          <motion.p 
+                                                                            initial={{ x: 100, opacity: 0 }}
+                                                                            animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+                                                                            transition={{ duration: 4.5, ease: "easeOut" }}
+          className='mb-23'>
             Table : {post.guestTable}
           </motion.p>
 
         </div>
 
-        <div className='flex flex-col gap-2 items-center'>
+        <motion.div 
+                                                                                              initial={{ y: 100, opacity: 0 }}
+                                                                                              animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+                                                                                              transition={{ duration: 5, ease: "easeOut" }}
+        className='flex flex-col gap-2 items-center'>
           <Image
                   src={post.guestQRCode || '/placeholder.svg?height=767&width=748'}
                   alt="Enywork en Formation du Personnel"
@@ -116,7 +157,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
                 <span className='text-xs'>TELECHARGEZ ICI</span>
                 <Download  className="w-5 h-5 animate-bounce" />
           </Link>
-        </div>
+        </motion.div>
 
 
 
@@ -128,18 +169,27 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
-      className=" bg-no-repeat overflow-hidden flex justify-between items-center  h-[926px] px-4 pt-20 pb-4 "
+      className=" bg-no-repeat overflow-hidden h-[926px]"
       style={{ backgroundImage: `url(${getTemplate02})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
-      <div className=' text-white text-center flex flex-col justify-center'>
+      <div ref={refGoldenBook} className=' text-white text-center flex flex-col justify-center pt-16'>
+
+      <motion.h2 
+                                  initial={{ x: 100, opacity: 0 }}
+                                  animate={isInViewGoldenBook ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+                                  transition={{ duration: 2, ease: "easeOut" }}
+        className='text-2xl mb-17'>
+            Livre d&apos;or
+        </motion.h2>
+
+        <ContactForm/>
+
 
         <p className='py-  px-8  text-[14px]'>
         Aujourd&apos;hui, nous unissons nos cœurs pour la vie, et c&apos;est avec émotion que vous assistez à la naissance d&apos;un nouveau chapitre plein d&apos;amour, de complicité et de promesses.
         </p>
 
-        <h1 className='text-[#c49344] text-[100px]'>
-          B de B
-        </h1>
+
 
         <p className='py-  px-8  text-[10px]'>
             Powered By Jethro Code/Polytech Services
