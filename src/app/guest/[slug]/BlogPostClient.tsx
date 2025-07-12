@@ -1,10 +1,13 @@
 'use client'
 
 import React from 'react'
-import { motion} from 'framer-motion'
+import { motion, useInView} from 'framer-motion'
 import Image from "next/image"
 import { Download } from "lucide-react"
 import Link from "next/link"
+import { useRef } from 'react'
+
+
 
 
 interface BlogPost {
@@ -24,7 +27,8 @@ interface BlogPostClientProps {
 }
 
 const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClientProps) => {
-
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <main className="min-h-screen bg-[#6f3d2c] flex flex-col">
@@ -49,49 +53,53 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
-      className="bg-no-repeat overflow-hidden flex justify-between items-center h-[926px]  px-4 pt-18 pb-4 "
+      className="bg-no-repeat overflow-hidden  h-[926px]  px-8 "
       style={{ backgroundImage: `url(${getTemplate02})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
-      <div className=' text-white text-center flex flex-col justify-center items-center px-4'>
-        <h2 className='text-lg mb-4'>
+      <div ref={ref} className=' text-white text-center flex flex-col justify-center items-center  pt-16'>
+        <motion.h2 
+                                  initial={{ x: 100, opacity: 0 }}
+                                  animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+                                  transition={{ duration: 1, ease: "easeOut" }}
+        className='text-2xl mb-17'>
             {post.guestName}
-        </h2>
+        </motion.h2>
 
-        <div className='flex flex-col justify-center items-center text-[14px]'>
-          <p className='mb-3'>
+        <div className='flex flex-col justify-center items-center text-[16px]'>
+          <motion.p className='mb-7'>
             C&apos;est avec beaucoup d&apos;émotions que Josky et Gilta vous convient à leur soirée dansante
-          </p>
+          </motion.p>
 
-          <p className='mb-3'>
+          <motion.p className='mb-7'>
             Le vendredi 08 août 2025 à 19h00. 
-          </p>
+          </motion.p>
 
 
           <div className='flex flex-col justify-center items-center'>
-            <p className='mb-2'>
+            <motion.p className='mb-4'>
               L&apos;événement aura lieu dans la magnifique Salle de fête Stina sise 45 dans la commune de Kasa-Vubu.
-            </p>
+            </motion.p>
 
-            <p className='mb-3'>
+            <motion.p className='mb-7'>
               Réf. Croisement des avenues Gambela et Popokabaka.
-            </p>
+            </motion.p>
           </div>
 
-          <p className='mb-2'>
+          <motion.p className='mb-7'>
             Pour plus d’infos contactez :
-          </p>
+          </motion.p>
 
-          <p className='mb-2'>
+          <motion.p className='mb-7'>
           +243 997 103 857 | +243 824 208 889
-          </p>
+          </motion.p>
 
-          <p className='mb-2'>
+          <motion.p className='mb-7'>
             Cordiale Bienvenue 🌸
-          </p>
+          </motion.p>
 
-          <p className='mb-4'>
+          <motion.p className='mb-23'>
             Table : {post.guestTable}
-          </p>
+          </motion.p>
 
         </div>
 
@@ -101,7 +109,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
                   alt="Enywork en Formation du Personnel"
                   width={448}
                   height={448}
-                  className="w-15 h-15 object-cover rounded-lg transition-transform duration-600 hover:scale-110"
+                  className="w-25 h-25 object-cover rounded-lg transition-transform duration-600 hover:scale-110"
                 />
 
           <Link href={post.guestCard} target='blank' download className="bg-[#c49344] hover:bg-[#9e793c] px-6 py-2 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2 mb-10">
