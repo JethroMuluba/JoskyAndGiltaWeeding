@@ -1,13 +1,1 @@
-{
-  "app": {
-    "[project]/src/app/guest/[slug]/page": [
-      "static/media/nuFiD_vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ-s.p.3ce64794.woff2"
-    ],
-    "[project]/src/app/page": [
-      "static/media/nuFiD_vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ-s.p.3ce64794.woff2"
-    ]
-  },
-  "appUsingSizeAdjust": true,
-  "pages": {},
-  "pagesUsingSizeAdjust": false
-}
+{"pages":{},"app":{"/Users/nacos/Devs Projects/JoskyAndGiltaWeeding/src/app/layout":["static/media/6af6b543dd3be231-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}
