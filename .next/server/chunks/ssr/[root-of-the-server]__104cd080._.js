@@ -463,10 +463,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                             lineNumber: 177,
                             columnNumber: 7
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "py-  px-8  text-[14px]",
-                            children: "Aujourd'hui, nous unissons nos cœurs pour la vie, et c'est avec émotion que vous assistez à la naissance d'un nouveau chapitre plein d'amour, de complicité et de promesses."
-                        }, void 0, false, {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {}, void 0, false, {
                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
                             lineNumber: 185,
                             columnNumber: 9
@@ -476,15 +473,15 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                             children: "Powered By Jethro Code/Polytech Services"
                         }, void 0, false, {
                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 191,
+                            lineNumber: 196,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "py-  px-8  text-[10px]",
-                            children: "0827 964 420"
+                            children: "+243 827 964 420"
                         }, void 0, false, {
                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 194,
+                            lineNumber: 199,
                             columnNumber: 9
                         }, this)
                     ]

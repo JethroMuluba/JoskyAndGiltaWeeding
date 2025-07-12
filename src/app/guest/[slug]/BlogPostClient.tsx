@@ -182,22 +182,24 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
             Livre d&apos;or
         </motion.h2>
 
-        <ContactForm/>
+        <div className='flex flex-col gap-5 '>
+          <ContactForm/>
 
+          <div>
+            <p className='py-  px-8  text-[10px]'>
+                Powered By Jethro Code/Polytech Services
+            </p>
+            <p className='py-  px-8  text-[10px]'>
+              +243 827 964 420
+            </p>
+          </div>
 
-        <p className='py-  px-8  text-[14px]'>
+        </div>
+
+        
+        {/* <p className='py-  px-8  text-[14px]'>
         Aujourd&apos;hui, nous unissons nos cœurs pour la vie, et c&apos;est avec émotion que vous assistez à la naissance d&apos;un nouveau chapitre plein d&apos;amour, de complicité et de promesses.
-        </p>
-
-
-
-        <p className='py-  px-8  text-[10px]'>
-            Powered By Jethro Code/Polytech Services
-        </p>
-        <p className='py-  px-8  text-[10px]'>
-            0827 964 420
-        </p>
-
+        </p> */}
       </div>
     </motion.section>
 

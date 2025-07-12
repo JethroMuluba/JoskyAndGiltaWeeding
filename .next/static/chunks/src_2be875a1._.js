@@ -59,7 +59,7 @@ const ContactForm = ()=>{
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         ref: ref,
-        className: "relative flex justify-center px-8 -mt-16 mb-20",
+        className: "relative flex justify-center px-8 -mt-16 ",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
             initial: {
                 y: 100,
@@ -78,7 +78,7 @@ const ContactForm = ()=>{
             },
             className: "w-full max-w-3xl",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "bg-white rounded-xl shadow-2xl p-4 md:p-8",
+                className: "  shadow-2xl p-4 md:p-8",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex flex-col md:flex-row gap-4 items-center justify-center",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -107,7 +107,7 @@ const ContactForm = ()=>{
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     htmlFor: "name",
-                                                    className: " text-base text-[#8D9092]",
+                                                    className: " text-base text-[#c49344]",
                                                     children: [
                                                         " ",
                                                         formData[0].label,
@@ -125,7 +125,7 @@ const ContactForm = ()=>{
                                                         maxLength: 60
                                                     }),
                                                     type: "text",
-                                                    className: " bg-[#F2F2F2] h-[55px] rounded-[5px] px-5 w-[100%] text-[#3B4E6A] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#3B4E6A] ",
+                                                    className: " bg-[#F2F2F2] h-[45px] opacity-10  px-5 w-[100%] text-[#000000] placeholder:text-[#OOOOOO] placeholder:opacity-80 outline-none appearance-none caret-[#3B4E6A] ",
                                                     placeholder: "Saissisez votre nom"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/contactForm.tsx",
@@ -154,7 +154,7 @@ const ContactForm = ()=>{
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     htmlFor: "firstname",
-                                                    className: " text-base text-[#8D9092]",
+                                                    className: " text-base text-[#c49344]",
                                                     children: [
                                                         " ",
                                                         formData[1].label,
@@ -172,7 +172,7 @@ const ContactForm = ()=>{
                                                         maxLength: 60
                                                     }),
                                                     type: "text",
-                                                    className: " bg-[#F2F2F2] h-[55px] rounded-[5px] px-5 w-[100%] text-[#3B4E6A] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#3B4E6A] ",
+                                                    className: " bg-[#F2F2F2] h-[45px] opacity-10  px-5 w-[100%] text-[#000000] placeholder:text-[#OOOOOO] placeholder:opacity-80 outline-none appearance-none caret-[#3B4E6A] ",
                                                     placeholder: "Saisissez votre prénom"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/contactForm.tsx",
@@ -210,7 +210,7 @@ const ContactForm = ()=>{
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     htmlFor: "phone",
-                                                    className: " text-base text-[#8D9092]",
+                                                    className: " text-base text-[#c49344]",
                                                     children: formData[2].label
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/contactForm.tsx",
@@ -222,7 +222,7 @@ const ContactForm = ()=>{
                                                         required: true
                                                     }),
                                                     type: "number",
-                                                    className: " bg-[#F2F2F2] h-[55px] rounded-[5px] px-5 w-[100%] text-[#3B4E6A] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#3B4E6A] ",
+                                                    className: " bg-[#F2F2F2] h-[45px] opacity-10  px-5 w-[100%] text-[#000000] placeholder:text-[#OOOOOO] placeholder:opacity-80 outline-none appearance-none caret-[#3B4E6A] ",
                                                     placeholder: "Saissisez votre numéro de téléphone"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/contactForm.tsx",
@@ -251,7 +251,7 @@ const ContactForm = ()=>{
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     htmlFor: "email",
-                                                    className: " text-base text-[#8D9092]",
+                                                    className: " text-base text-[#c49344]",
                                                     children: formData[3].label
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/contactForm.tsx",
@@ -265,7 +265,7 @@ const ContactForm = ()=>{
                                                         maxLength: 60
                                                     }),
                                                     type: "email",
-                                                    className: " bg-[#F2F2F2] h-[55px] rounded-[5px] px-5 w-[100%] text-[#3B4E6A] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#3B4E6A] ",
+                                                    className: " bg-[#F2F2F2] h-[45px] opacity-10  px-5 w-[100%] text-[#000000] placeholder:text-[#OOOOOO] placeholder:opacity-80 outline-none appearance-none caret-[#3B4E6A] ",
                                                     placeholder: "Saissisez votre email"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/contactForm.tsx",
@@ -300,7 +300,7 @@ const ContactForm = ()=>{
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                             htmlFor: "message",
-                                            className: " text-base text-[#8D9092]",
+                                            className: " text-base text-[#c49344]",
                                             children: formData[4].label
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/contactForm.tsx",
@@ -315,7 +315,7 @@ const ContactForm = ()=>{
                                             }),
                                             name: "message",
                                             id: "",
-                                            className: " bg-[#F2F2F2] h-[186px] rounded-[5px] p-5 w-[100%] text-[#3B4E6A] placeholder:text-[#8D9092] placeholder:opacity-20 outline-none appearance-none caret-[#3B4E6A] ",
+                                            className: " bg-[#F2F2F2] opacity-10  h-[156px]  p-5 w-[100%] text-[#000000] placeholder:text-[#OOOOOO] placeholder:opacity-80 outline-none appearance-none caret-[#3B4E6A] ",
                                             placeholder: "Saissisez votre message"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/contactForm.tsx",
@@ -357,7 +357,7 @@ const ContactForm = ()=>{
                                         damping: 20,
                                         delay: 0.1
                                     },
-                                    className: "relative top-[2px] lg:top-[1px] flex justify-center text-center bg-[#34B77B] text-white px-8 py-4 rounded-lg",
+                                    className: "relative top-[2px] lg:top-[1px] flex justify-center text-center bg-[#34B77B] text-white px-8 py-4 ",
                                     children: "Message Sent Successfully! Thank You To Contact Us."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/contactForm.tsx",
@@ -387,10 +387,10 @@ const ContactForm = ()=>{
                                     columnNumber: 41
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex justify-center md:justify-start w-full ",
+                                    className: "flex justify-center items-center gap-5 md:justify-start w-full ",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         type: "submit",
-                                        className: " w-full md:w-auto bg-[#E10919] hover:bg-[#B00813] px-8 py-4 rounded-lg text-white cursor-pointer flex items-center gap-2 active:border-2 active:border-[#3B4E6A]",
+                                        className: " w-full md:w-auto bg-[#c49344] hover:bg-[#9e793c] px-8 py-4  text-white cursor-pointer flex items-center gap-2 active:border-2 active:border-[#3B4E6A]",
                                         children: [
                                             formData[5].buttonName,
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2d$horizontal$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__SendHorizontal$3e$__["SendHorizontal"], {
@@ -900,33 +900,42 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                             lineNumber: 177,
                             columnNumber: 7
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$contactForm$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex flex-col gap-5 ",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$contactForm$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                                    fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
+                                    lineNumber: 186,
+                                    columnNumber: 11
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "py-  px-8  text-[10px]",
+                                            children: "Powered By Jethro Code/Polytech Services"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
+                                            lineNumber: 189,
+                                            columnNumber: 13
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "py-  px-8  text-[10px]",
+                                            children: "+243 827 964 420"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
+                                            lineNumber: 192,
+                                            columnNumber: 13
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
+                                    lineNumber: 188,
+                                    columnNumber: 11
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
                             lineNumber: 185,
-                            columnNumber: 9
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "py-  px-8  text-[14px]",
-                            children: "Aujourd'hui, nous unissons nos cœurs pour la vie, et c'est avec émotion que vous assistez à la naissance d'un nouveau chapitre plein d'amour, de complicité et de promesses."
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 188,
-                            columnNumber: 9
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "py-  px-8  text-[10px]",
-                            children: "Powered By Jethro Code/Polytech Services"
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 194,
-                            columnNumber: 9
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "py-  px-8  text-[10px]",
-                            children: "0827 964 420"
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 197,
                             columnNumber: 9
                         }, this)
                     ]

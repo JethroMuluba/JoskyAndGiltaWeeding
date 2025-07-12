@@ -437,12 +437,32 @@
     height: calc(var(--spacing) * 25);
   }
 
-  .h-\[00px\] {
+  .h-\[0px\], .h-\[00px\] {
     height: 0;
+  }
+
+  .h-\[3px\] {
+    height: 3px;
+  }
+
+  .h-\[4px\] {
+    height: 4px;
   }
 
   .h-\[9px\] {
     height: 9px;
+  }
+
+  .h-\[30px\] {
+    height: 30px;
+  }
+
+  .h-\[40px\] {
+    height: 40px;
+  }
+
+  .h-\[45px\] {
+    height: 45px;
   }
 
   .h-\[55px\] {
@@ -451,6 +471,10 @@
 
   .h-\[96px\] {
     height: 96px;
+  }
+
+  .h-\[156px\] {
+    height: 156px;
   }
 
   .h-\[186px\] {
@@ -559,6 +583,10 @@
 
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
   }
 
   .gap-8 {
@@ -777,16 +805,44 @@
     white-space: nowrap;
   }
 
+  .text-\[\#000000\] {
+    color: #000;
+  }
+
   .text-\[\#3B4E6A\] {
     color: #3b4e6a;
+  }
+
+  .text-\[\#3\] {
+    color: #3;
   }
 
   .text-\[\#8D9092\] {
     color: #8d9092;
   }
 
+  .text-\[\#A\] {
+    color: #A;
+  }
+
+  .text-\[\#\] {
+    color: # ;
+  }
+
   .text-\[\#c49344\] {
     color: #c49344;
+  }
+
+  .text-\[\#fff\] {
+    color: #fff;
+  }
+
+  .text-\[A\] {
+    color: A;
+  }
+
+  .text-\[fffA\] {
+    color: fffA;
   }
 
   .text-white {
@@ -799,6 +855,26 @@
 
   .caret-\[\#3B4E6A\] {
     caret-color: #3b4e6a;
+  }
+
+  .opacity-0 {
+    opacity: 0;
+  }
+
+  .opacity-10 {
+    opacity: .1;
+  }
+
+  .opacity-20 {
+    opacity: .2;
+  }
+
+  .opacity-30 {
+    opacity: .3;
+  }
+
+  .opacity-50 {
+    opacity: .5;
   }
 
   .shadow-2xl {
@@ -859,12 +935,100 @@
     outline-style: none;
   }
 
+  .placeholder\:text-\[\#8D9\]::placeholder {
+    color: #8d9;
+  }
+
+  .placeholder\:text-\[\#8D90\]::placeholder {
+    color: #8d90;
+  }
+
+  .placeholder\:text-\[\#8D909\]::placeholder {
+    color: #8D909;
+  }
+
   .placeholder\:text-\[\#8D9092\]::placeholder {
     color: #8d9092;
   }
 
+  .placeholder\:text-\[\#8D\]::placeholder {
+    color: #8D;
+  }
+
+  .placeholder\:text-\[\#C1C1C1\]::placeholder {
+    color: #c1c1c1;
+  }
+
+  .placeholder\:text-\[\#C1C1\]::placeholder {
+    color: #c1c1;
+  }
+
+  .placeholder\:text-\[\#C1\]::placeholder {
+    color: #C1;
+  }
+
+  .placeholder\:text-\[\#CCCCCC\]::placeholder {
+    color: #ccc;
+  }
+
+  .placeholder\:text-\[\#C\]::placeholder {
+    color: #C;
+  }
+
+  .placeholder\:text-\[\#OOOOOO\]::placeholder {
+    color: #OOOOOO;
+  }
+
+  .placeholder\:text-\[\#\]::placeholder {
+    color: # ;
+  }
+
+  .placeholder\:text-\[\#c49344\]::placeholder {
+    color: #c49344;
+  }
+
+  .placeholder\:text-\[\#c\]::placeholder {
+    color: #c;
+  }
+
+  .placeholder\:text-\[\#cccc\]::placeholder {
+    color: #cccc;
+  }
+
+  .placeholder\:text-\[\#cccccc\]::placeholder {
+    color: #ccc;
+  }
+
+  .placeholder\:text-\[\#fff\]::placeholder {
+    color: #fff;
+  }
+
+  .placeholder\:opacity-0::placeholder {
+    opacity: 0;
+  }
+
   .placeholder\:opacity-20::placeholder {
     opacity: .2;
+  }
+
+  .placeholder\:opacity-50::placeholder {
+    opacity: .5;
+  }
+
+  .placeholder\:opacity-60::placeholder {
+    opacity: .6;
+  }
+
+  .placeholder\:opacity-70::placeholder {
+    opacity: .7;
+  }
+
+  .placeholder\:opacity-80::placeholder {
+    opacity: .8;
+  }
+
+  .placeholder\:opacity-90::placeholder {
+    opacity: .9;
   }
 
   @media (hover: hover) {
