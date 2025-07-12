@@ -27,7 +27,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
 
 
   return (
-    <main className="min-h-screen bg-[#252323] ">
+    <main className="min-h-screen bg-[#6f3d2c] flex flex-col">
       <motion.section 
                           initial={{ scale: 0, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
@@ -49,8 +49,8 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
-      className="bg-no-repeat overflow-hidden flex justify-between items-center h-[596px]  px-4 pt-18 pb-4 "
-      style={{ backgroundImage: `url(${getTemplate02})`, backgroundSize: 'contain', backgroundPosition: 'center' }}
+      className="bg-no-repeat overflow-hidden flex justify-between items-center h-[926px]  px-4 pt-18 pb-4 "
+      style={{ backgroundImage: `url(${getTemplate02})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div className=' text-white text-center flex flex-col justify-center items-center px-4'>
         <h2 className='text-lg mb-4'>
@@ -120,8 +120,8 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
-      className=" bg-no-repeat overflow-hidden flex justify-between items-center  h-[596px] px-4 pt-20 pb-4 "
-      style={{ backgroundImage: `url(${getTemplate02})`, backgroundSize: 'contain', backgroundPosition: 'center' }}
+      className=" bg-no-repeat overflow-hidden flex justify-between items-center  h-[926px] px-4 pt-20 pb-4 "
+      style={{ backgroundImage: `url(${getTemplate02})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div className=' text-white text-center flex flex-col justify-center'>
 

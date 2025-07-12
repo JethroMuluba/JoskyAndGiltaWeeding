@@ -488,8 +488,20 @@
     border-width: 1px;
   }
 
+  .bg-\[\#6f3d2c\] {
+    background-color: #6f3d2c;
+  }
+
   .bg-\[\#252323\] {
     background-color: #252323;
+  }
+
+  .bg-\[\#613222\] {
+    background-color: #613222;
+  }
+
+  .bg-\[\#663423\] {
+    background-color: #663423;
   }
 
   .bg-\[\#E10919\] {

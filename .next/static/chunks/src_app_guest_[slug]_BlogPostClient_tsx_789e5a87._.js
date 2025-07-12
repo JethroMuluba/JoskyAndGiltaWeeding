@@ -21,7 +21,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-        className: "min-h-screen bg-[#252323] ",
+        className: "min-h-screen bg-[#6f3d2c] flex flex-col",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].section, {
                 initial: {
@@ -69,10 +69,10 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                 transition: {
                     duration: 1.5
                 },
-                className: "bg-no-repeat overflow-hidden flex justify-between items-center h-[596px]  px-4 pt-18 pb-4 ",
+                className: "bg-no-repeat overflow-hidden flex justify-between items-center h-[926px]  px-4 pt-18 pb-4 ",
                 style: {
                     backgroundImage: `url(${getTemplate02})`,
-                    backgroundSize: 'contain',
+                    backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 },
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -241,10 +241,10 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                 transition: {
                     duration: 1.5
                 },
-                className: " bg-no-repeat overflow-hidden flex justify-between items-center  h-[596px] px-4 pt-20 pb-4 ",
+                className: " bg-no-repeat overflow-hidden flex justify-between items-center  h-[926px] px-4 pt-20 pb-4 ",
                 style: {
                     backgroundImage: `url(${getTemplate02})`,
-                    backgroundSize: 'contain',
+                    backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 },
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
