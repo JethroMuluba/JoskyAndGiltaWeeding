@@ -882,16 +882,16 @@ const Guest = () => {
             <tbody>
               {tableOfGuest.map((guest, idx) => (
                 <tr key={guest.id} className={
-                  ` transition-colors text-white duration-200 ${idx % 2 === 0 ? 'bg-light-secondary/60' : 'bg-white/40'} hover:bg-secondary/30 hover:text-white`
+                  ` transition-colors text-white text-[14px] duration-200 ${idx % 2 === 0 ? 'bg-light-secondary/60' : 'bg-white/40'} hover:bg-secondary/30 hover:text-white`
                 }>
                   <td className="px-3 py-2 font-semibold">{guest.id}</td>
                   <td className="px-3 py-2">{guest.guestName}</td>
-                  <td className="px-3 py-2 font-bold text-primary">{guest.guestTable}</td>
+                  <td className="px-3 py-2  text-primary">{guest.guestTable}</td>
                   <td className="px-3 py-2">
                     <a
                       href={`/guest/${guest.id}`}
                       rel="noopener noreferrer"
-                      className="inline-block px-4 py-1 rounded-lg bg-primary text-white  shadow hover:bg-secondary hover:text-[#6f3d2c] transition-colors duration-200 text-sm"
+                      className="inline-block px-4 py-1  rounded-lg bg-primary text-white  shadow hover:bg-secondary hover:text-[#6f3d2c] transition-colors duration-200 text-sm"
                     >
                       Voir invitation
                     </a>
