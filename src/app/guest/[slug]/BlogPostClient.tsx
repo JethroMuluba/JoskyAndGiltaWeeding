@@ -3,7 +3,8 @@
 import React from 'react'
 import { motion, useInView} from 'framer-motion'
 import Image from "next/image"
-import { Printer } from "lucide-react"
+import { Download} from "lucide-react"
+import html2canvas from "html2canvas";
 import { useRef } from 'react'
 import ContactForm from '@/components/contactForm'
 
@@ -34,57 +35,136 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
   const refGoldenBook = useRef(null);
   const isInViewGoldenBook = useInView(ref, { once: true, margin: "-100px" });
 
-  const handlePrintSection = () => {
-    // Créer une nouvelle fenêtre pour l'impression
-    const printWindow = window.open('', '_blank');
-    if (printWindow) {
-      // Récupérer le contenu de la section active (la deuxième section avec les détails)
-      const sectionContent = document.querySelector('section:nth-child(2)');
-      if (sectionContent) {
-        const content = sectionContent.innerHTML;
-        
-        printWindow.document.write(`
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <title>Invitation - ${post.guestName}</title>
-              <style>
-                body { 
-                  margin: 0; 
-                  padding: 20px; 
-                  font-family: Arial, sans-serif;
-                  background: #6f3d2c;
-                  color: white;
-                }
-                .print-content {
-                  max-width: 400px;
-                  margin: 0 auto;
-                  text-align: center;
-                }
-                img { max-width: 200px; height: auto; }
-                .download-btn { display: none; }
-                @media print {
-                  body { background: white; color: black; }
-                }
-              </style>
-            </head>
-            <body>
-              <div class="print-content">
-                ${content}
-              </div>
-            </body>
-          </html>
-        `);
-        
-        printWindow.document.close();
-        printWindow.focus();
-        
-        // Attendre que le contenu soit chargé puis imprimer
-        setTimeout(() => {
-          printWindow.print();
-          printWindow.close();
-        }, 500);
+  // const handlePrintSection = () => {
+  //   // Récupérer les styles globaux
+  //   const globalStyles = `
+  //     <style>
+  //       @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+  //       body {
+  //         background: #6f3d2c;
+  //         color: white;
+  //         font-family: 'Poppins', Arial, sans-serif;
+  //         margin: 0;
+  //         padding: 0;
+  //       }
+  //       .print-content {
+  //         max-width: 428px;
+  //         margin: 0 auto;
+  //         min-height: 926px;
+  //         background: #6f3d2c;
+  //         border-radius: 16px;
+  //         box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  //         padding: 32px 24px;
+  //         display: flex;
+  //         flex-direction: column;
+  //         align-items: center;
+  //       }
+  //       h2 {
+  //         font-size: 2rem;
+  //         margin-bottom: 1.5rem;
+  //         font-family: 'Bebas Neue', 'Poppins', Arial, sans-serif;
+  //         font-weight: bold;
+  //       }
+  //       p {
+  //         font-size: 1rem;
+  //         margin-bottom: 1rem;
+  //       }
+  //       .qr-section {
+  //         display: flex;
+  //         flex-direction: column;
+  //         align-items: center;
+  //         margin-top: 1.5rem;
+  //       }
+  //       .qr-section img {
+  //         width: 180px;
+  //         height: 180px;
+  //         object-fit: cover;
+  //         border-radius: 12px;
+  //         margin-bottom: 0.5rem;
+  //       }
+  //       .no-print {
+  //         display: none !important;
+  //       }
+  //       @media print {
+  //         body {
+  //           background: white !important;
+  //           color: #222 !important;
+  //         }
+  //         .print-content {
+  //           background: white !important;
+  //           color: #222 !important;
+  //           box-shadow: none;
+  //         }
+  //         .no-print {
+  //           display: none !important;
+  //         }
+  //       }
+  //     </style>
+  //   `;
+  //   // Créer une nouvelle fenêtre pour l'impression
+  //   const printWindow = window.open('', '_blank');
+  //   if (printWindow) {
+  //     // Récupérer le contenu de la section active (la deuxième section avec les détails)
+  //     const sectionContent = document.querySelector('section:nth-child(2)');
+  //     if (sectionContent) {
+  //       // Cloner le contenu pour pouvoir le modifier
+  //       const clone = sectionContent.cloneNode(true) as HTMLElement;
+  //       // Supprimer le bouton d'impression dans le clone
+  //       const printBtn = clone.querySelector('button');
+  //       if (printBtn) printBtn.classList.add('no-print');
+  //       // Ajouter le texte sous le QR code
+  //       const qrSection = clone.querySelector('img');
+  //       if (qrSection && qrSection.parentNode) {
+  //         const scanText = document.createElement('div');
+  //         scanText.style.fontSize = '0.95rem';
+  //         scanText.style.marginTop = '0.5rem';
+  //         scanText.style.color = '#c49344';
+  //         scanText.style.fontWeight = '500';
+  //         scanText.innerText = 'Scanner moi pour la localisation';
+  //         qrSection.parentNode.appendChild(scanText);
+  //       }
+  //       printWindow.document.write(`
+  //         <!DOCTYPE html>
+  //         <html>
+  //           <head>
+  //             <title>Invitation - ${post.guestName}</title>
+  //             ${globalStyles}
+  //           </head>
+  //           <body>
+  //             <div class="print-content">
+  //               ${(clone as HTMLElement).innerHTML}
+  //             </div>
+  //           </body>
+  //         </html>
+  //       `);
+  //       printWindow.document.close();
+  //       printWindow.focus();
+  //       setTimeout(() => {
+  //         printWindow.print();
+  //         printWindow.close();
+  //       }, 500);
+  //     }
+  //   }
+  // };
+
+  const handleDownloadPng = async () => {
+    const section = document.querySelector('section:nth-child(2)');
+    if (section) {
+      // Masquer le bouton avant capture
+      const btn = section.querySelector('button');
+      let oldDisplay = '';
+      if (btn) {
+        oldDisplay = btn.style.display;
+        btn.style.display = 'none';
       }
+      // Utiliser html2canvas
+      const canvas = await html2canvas(section as HTMLElement, {useCORS: true, backgroundColor: null});
+      const link = document.createElement('a');
+      link.download = `invitation-${post.guestName}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      // Réafficher le bouton
+      if (btn) btn.style.display = oldDisplay;
     }
   };
 
@@ -203,15 +283,16 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
                   alt="Enywork en Formation du Personnel"
                   width={448}
                   height={448}
-                  className="w-25 h-25 object-cover rounded-lg transition-transform duration-600 hover:scale-110"
+                  className="object-cover transition-transform duration-600 hover:scale-110"
+                  style={{ width: '100px', height: '100px', display: 'block', margin: '0 auto', objectFit: 'cover', borderRadius: '12px' }}
                 />
 
           <button 
-            onClick={handlePrintSection}
+            onClick={handleDownloadPng}
             className="bg-[#c49344] hover:bg-[#9e793c] px-6 py-2 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2 mb-10"
           >
-            <span className='text-xs'>IMPRIMER L&apos;INVITATION</span>
-            <Printer className="w-5 h-5 animate-bounce" />
+            <span className='text-xs'>TÉLÉCHARGER EN PNG</span>
+            <Download className="w-5 h-5 animate-bounce" />
           </button>
         </motion.div>
 

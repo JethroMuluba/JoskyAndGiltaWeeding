@@ -366,6 +366,10 @@
     margin-bottom: calc(var(--spacing) * 23);
   }
 
+  .block {
+    display: block;
+  }
+
   .flex {
     display: flex;
   }
