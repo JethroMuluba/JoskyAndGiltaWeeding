@@ -346,6 +346,30 @@
     margin-top: calc(var(--spacing) * -16);
   }
 
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
+
+  .mt-100 {
+    margin-top: calc(var(--spacing) * 100);
+  }
+
+  .mt-150 {
+    margin-top: calc(var(--spacing) * 150);
+  }
+
+  .mt-200 {
+    margin-top: calc(var(--spacing) * 200);
+  }
+
+  .mt-1500 {
+    margin-top: calc(var(--spacing) * 1500);
+  }
+
+  .mt-2000 {
+    margin-top: calc(var(--spacing) * 2000);
+  }
+
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -466,8 +490,16 @@
     flex-direction: column;
   }
 
+  .items-baseline {
+    align-items: baseline;
+  }
+
   .items-center {
     align-items: center;
+  }
+
+  .items-end {
+    align-items: flex-end;
   }
 
   .items-start {
