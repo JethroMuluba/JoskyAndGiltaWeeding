@@ -3,8 +3,7 @@
 import React from 'react'
 import { motion, useInView} from 'framer-motion'
 import Image from "next/image"
-import { Download } from "lucide-react"
-import Link from "next/link"
+import { Printer } from "lucide-react"
 import { useRef } from 'react'
 import ContactForm from '@/components/contactForm'
 
@@ -34,6 +33,60 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
 
   const refGoldenBook = useRef(null);
   const isInViewGoldenBook = useInView(ref, { once: true, margin: "-100px" });
+
+  const handlePrintSection = () => {
+    // Créer une nouvelle fenêtre pour l'impression
+    const printWindow = window.open('', '_blank');
+    if (printWindow) {
+      // Récupérer le contenu de la section active (la deuxième section avec les détails)
+      const sectionContent = document.querySelector('section:nth-child(2)');
+      if (sectionContent) {
+        const content = sectionContent.innerHTML;
+        
+        printWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <title>Invitation - ${post.guestName}</title>
+              <style>
+                body { 
+                  margin: 0; 
+                  padding: 20px; 
+                  font-family: Arial, sans-serif;
+                  background: #6f3d2c;
+                  color: white;
+                }
+                .print-content {
+                  max-width: 400px;
+                  margin: 0 auto;
+                  text-align: center;
+                }
+                img { max-width: 200px; height: auto; }
+                .download-btn { display: none; }
+                @media print {
+                  body { background: white; color: black; }
+                }
+              </style>
+            </head>
+            <body>
+              <div class="print-content">
+                ${content}
+              </div>
+            </body>
+          </html>
+        `);
+        
+        printWindow.document.close();
+        printWindow.focus();
+        
+        // Attendre que le contenu soit chargé puis imprimer
+        setTimeout(() => {
+          printWindow.print();
+          printWindow.close();
+        }, 500);
+      }
+    }
+  };
 
   return (
     <main className="min-h-screen bg-[#6f3d2c] flex flex-col md:items-center">
@@ -153,10 +206,13 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
                   className="w-25 h-25 object-cover rounded-lg transition-transform duration-600 hover:scale-110"
                 />
 
-          <Link href={post.guestCard} target='blank' download className="bg-[#c49344] hover:bg-[#9e793c] px-6 py-2 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2 mb-10">
-                <span className='text-xs'>TELECHARGEZ ICI</span>
-                <Download  className="w-5 h-5 animate-bounce" />
-          </Link>
+          <button 
+            onClick={handlePrintSection}
+            className="bg-[#c49344] hover:bg-[#9e793c] px-6 py-2 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2 mb-10"
+          >
+            <span className='text-xs'>IMPRIMER L&apos;INVITATION</span>
+            <Printer className="w-5 h-5 animate-bounce" />
+          </button>
         </motion.div>
 
 

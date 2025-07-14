@@ -1,12 +1,9 @@
 {
   "app": {
-    "[project]/src/app/_not-found/page": [
-      "static/media/nuFiD_vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ-s.p.3ce64794.woff2"
-    ],
     "[project]/src/app/guest/[slug]/page": [
       "static/media/nuFiD_vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ-s.p.3ce64794.woff2"
     ],
-    "[project]/src/app/guest/page": [
+    "[project]/src/app/page": [
       "static/media/nuFiD_vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ-s.p.3ce64794.woff2"
     ]
   },

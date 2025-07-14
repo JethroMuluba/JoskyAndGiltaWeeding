@@ -469,14 +469,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$utils$2f$use$2d$in$2d$view$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/utils/use-in-view.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/download.js [app-client] (ecmascript) <export default as Download>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$printer$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Printer$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/printer.js [app-client] (ecmascript) <export default as Printer>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$contactForm$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/contactForm.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
-;
 ;
 ;
 ;
@@ -494,6 +492,56 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
         once: true,
         margin: "-100px"
     });
+    const handlePrintSection = ()=>{
+        // Créer une nouvelle fenêtre pour l'impression
+        const printWindow = window.open('', '_blank');
+        if (printWindow) {
+            // Récupérer le contenu de la section active (la deuxième section avec les détails)
+            const sectionContent = document.querySelector('section:nth-child(2)');
+            if (sectionContent) {
+                const content = sectionContent.innerHTML;
+                printWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <title>Invitation - ${post.guestName}</title>
+              <style>
+                body { 
+                  margin: 0; 
+                  padding: 20px; 
+                  font-family: Arial, sans-serif;
+                  background: #6f3d2c;
+                  color: white;
+                }
+                .print-content {
+                  max-width: 400px;
+                  margin: 0 auto;
+                  text-align: center;
+                }
+                img { max-width: 200px; height: auto; }
+                .download-btn { display: none; }
+                @media print {
+                  body { background: white; color: black; }
+                }
+              </style>
+            </head>
+            <body>
+              <div class="print-content">
+                ${content}
+              </div>
+            </body>
+          </html>
+        `);
+                printWindow.document.close();
+                printWindow.focus();
+                // Attendre que le contenu soit chargé puis imprimer
+                setTimeout(()=>{
+                    printWindow.print();
+                    printWindow.close();
+                }, 500);
+            }
+        }
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
         className: "min-h-screen bg-[#6f3d2c] flex flex-col md:items-center",
         children: [
@@ -527,7 +575,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                 }
             }, void 0, false, {
                 fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                lineNumber: 40,
+                lineNumber: 93,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].section, {
@@ -573,7 +621,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                             children: post.guestName
                         }, void 0, false, {
                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 65,
+                            lineNumber: 118,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -599,7 +647,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     children: "C'est avec beaucoup d'émotions que Josky et Gilta vous convient à leur soirée dansante"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 74,
+                                    lineNumber: 127,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -622,7 +670,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     children: "Le vendredi 08 août 2025 à 19h00."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 82,
+                                    lineNumber: 135,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -648,7 +696,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                             children: "L'événement aura lieu dans la magnifique Salle de fête Stina sise 45 dans la commune de Kasa-Vubu."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                            lineNumber: 92,
+                                            lineNumber: 145,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -671,13 +719,13 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                             children: "Réf. Croisement des avenues Gambela et Popokabaka."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                            lineNumber: 100,
+                                            lineNumber: 153,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 91,
+                                    lineNumber: 144,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -700,7 +748,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     children: "Pour plus d’infos contactez :"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 109,
+                                    lineNumber: 162,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -723,7 +771,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     children: "+243 997 103 857 | +243 824 208 889"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 170,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -746,7 +794,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     children: "Cordiale Bienvenue 🌸"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 178,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -772,13 +820,13 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 186,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 73,
+                            lineNumber: 126,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -807,51 +855,49 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     className: "w-25 h-25 object-cover rounded-lg transition-transform duration-600 hover:scale-110"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 148,
+                                    lineNumber: 201,
                                     columnNumber: 11
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    href: post.guestCard,
-                                    target: "blank",
-                                    download: true,
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: handlePrintSection,
                                     className: "bg-[#c49344] hover:bg-[#9e793c] px-6 py-2 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2 mb-10",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "text-xs",
-                                            children: "TELECHARGEZ ICI"
+                                            children: "IMPRIMER L'INVITATION"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                            lineNumber: 157,
-                                            columnNumber: 17
+                                            lineNumber: 213,
+                                            columnNumber: 13
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__["Download"], {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$printer$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Printer$3e$__["Printer"], {
                                             className: "w-5 h-5 animate-bounce"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                            lineNumber: 158,
-                                            columnNumber: 17
+                                            lineNumber: 214,
+                                            columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 156,
+                                    lineNumber: 209,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 143,
+                            lineNumber: 196,
                             columnNumber: 9
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                    lineNumber: 64,
+                    lineNumber: 117,
                     columnNumber: 7
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                lineNumber: 56,
+                lineNumber: 109,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].section, {
@@ -897,7 +943,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                             children: "Livre d'or"
                         }, void 0, false, {
                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 177,
+                            lineNumber: 233,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -905,7 +951,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$contactForm$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 186,
+                                    lineNumber: 242,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -915,7 +961,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                             children: "Powered By Jethro Code/Polytech Services"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                            lineNumber: 189,
+                                            lineNumber: 245,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -923,36 +969,36 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                             children: "+243 827 964 420"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                            lineNumber: 192,
+                                            lineNumber: 248,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 188,
+                                    lineNumber: 244,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 185,
+                            lineNumber: 241,
                             columnNumber: 9
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                    lineNumber: 175,
+                    lineNumber: 231,
                     columnNumber: 7
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                lineNumber: 167,
+                lineNumber: 223,
                 columnNumber: 5
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-        lineNumber: 39,
+        lineNumber: 92,
         columnNumber: 5
     }, this);
 };

@@ -502,6 +502,56 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
         once: true,
         margin: "-100px"
     });
+    const handlePrintSection = ()=>{
+        // Créer une nouvelle fenêtre pour l'impression
+        const printWindow = window.open('', '_blank');
+        if (printWindow) {
+            // Récupérer le contenu de la section active (la deuxième section avec les détails)
+            const sectionContent = document.querySelector('section:nth-child(2)');
+            if (sectionContent) {
+                const content = sectionContent.innerHTML;
+                printWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <title>Invitation - ${post.guestName}</title>
+              <style>
+                body { 
+                  margin: 0; 
+                  padding: 20px; 
+                  font-family: Arial, sans-serif;
+                  background: #6f3d2c;
+                  color: white;
+                }
+                .print-content {
+                  max-width: 400px;
+                  margin: 0 auto;
+                  text-align: center;
+                }
+                img { max-width: 200px; height: auto; }
+                .download-btn { display: none; }
+                @media print {
+                  body { background: white; color: black; }
+                }
+              </style>
+            </head>
+            <body>
+              <div class="print-content">
+                ${content}
+              </div>
+            </body>
+          </html>
+        `);
+                printWindow.document.close();
+                printWindow.focus();
+                // Attendre que le contenu soit chargé puis imprimer
+                setTimeout(()=>{
+                    printWindow.print();
+                    printWindow.close();
+                }, 500);
+            }
+        }
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
         className: "min-h-screen bg-[#6f3d2c] flex flex-col md:items-center",
         children: [
@@ -535,7 +585,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                 }
             }, void 0, false, {
                 fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                lineNumber: 40,
+                lineNumber: 94,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].section, {
@@ -581,7 +631,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                             children: post.guestName
                         }, void 0, false, {
                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 65,
+                            lineNumber: 119,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -607,7 +657,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     children: "C'est avec beaucoup d'émotions que Josky et Gilta vous convient à leur soirée dansante"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 74,
+                                    lineNumber: 128,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -630,7 +680,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     children: "Le vendredi 08 août 2025 à 19h00."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 82,
+                                    lineNumber: 136,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -656,7 +706,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                             children: "L'événement aura lieu dans la magnifique Salle de fête Stina sise 45 dans la commune de Kasa-Vubu."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                            lineNumber: 92,
+                                            lineNumber: 146,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -679,13 +729,13 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                             children: "Réf. Croisement des avenues Gambela et Popokabaka."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                            lineNumber: 100,
+                                            lineNumber: 154,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 91,
+                                    lineNumber: 145,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -708,7 +758,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     children: "Pour plus d’infos contactez :"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 109,
+                                    lineNumber: 163,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -731,7 +781,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     children: "+243 997 103 857 | +243 824 208 889"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 171,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -754,7 +804,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     children: "Cordiale Bienvenue 🌸"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 179,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -780,13 +830,13 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 187,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 73,
+                            lineNumber: 127,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -815,7 +865,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                     className: "w-25 h-25 object-cover rounded-lg transition-transform duration-600 hover:scale-110"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 148,
+                                    lineNumber: 202,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -829,37 +879,37 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                             children: "TELECHARGEZ ICI"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                            lineNumber: 157,
+                                            lineNumber: 211,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__["Download"], {
                                             className: "w-5 h-5 animate-bounce"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                            lineNumber: 158,
+                                            lineNumber: 212,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 156,
+                                    lineNumber: 210,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 143,
+                            lineNumber: 197,
                             columnNumber: 9
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                    lineNumber: 64,
+                    lineNumber: 118,
                     columnNumber: 7
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                lineNumber: 56,
+                lineNumber: 110,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].section, {
@@ -905,7 +955,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                             children: "Livre d'or"
                         }, void 0, false, {
                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 177,
+                            lineNumber: 231,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -913,7 +963,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$contactForm$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 186,
+                                    lineNumber: 240,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -923,7 +973,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                             children: "Powered By Jethro Code/Polytech Services"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                            lineNumber: 189,
+                                            lineNumber: 243,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -931,36 +981,36 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                             children: "+243 827 964 420"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                            lineNumber: 192,
+                                            lineNumber: 246,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                                    lineNumber: 188,
+                                    lineNumber: 242,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                            lineNumber: 185,
+                            lineNumber: 239,
                             columnNumber: 9
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                    lineNumber: 175,
+                    lineNumber: 229,
                     columnNumber: 7
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-                lineNumber: 167,
+                lineNumber: 221,
                 columnNumber: 5
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/guest/[slug]/BlogPostClient.tsx",
-        lineNumber: 39,
+        lineNumber: 93,
         columnNumber: 5
     }, this);
 };
