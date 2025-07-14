@@ -10,7 +10,7 @@ const tableOfGuest = [
     guestName: "Mr Jethro Muluba",
     guestQRCode: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752284016/Weeding%20Ya%20Djo/Location_QR_Code_j1afr2.png",
     guestCard: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752284355/Weeding%20Ya%20Djo/Card/Bottom_guest_Mr_Jethro_Muluba_blbl7s.png",
-    guestTable: "Patience"
+    guestTable: "Baseron"
   },
 
   {
@@ -867,25 +867,35 @@ const Guest = () => {
     >
     </motion.section>
       {/* Liste des invités */}
-      <section className="w-full max-w-2xl mx-auto mt-8 p-4 bg-white/70 rounded-2xl shadow-lg border border-light-quaternary backdrop-blur-md">
-        <h2 className="text-3xl font-made-infinity font-bold mb-6 text-center text-[#6f3d2c] tracking-wide">Liste des invités</h2>
+      <section className="w-full max-w-2xl mx-auto mt-8  p-4 bg-[#6f3d2c] rounded-2xl shadow-lg border-light-quaternary backdrop-blur-md">
+        <h2 className="text-3xl font-made-infinity font-bold mb-4 text-center text-[#c49344]  tracking-wide">Liste des invités</h2>
         <div className="overflow-x-auto">
           <table className="min-w-full text-base text-left font-poppins">
             <thead>
-              <tr className="bg-secondary/90 text-[#6f3d2c]">
+              <tr className="bg-secondary/90 text-[#c49344]">
                 <th className="px-3 py-2 rounded-tl-2xl">ID</th>
                 <th className="px-3 py-2">Nom de l&apos;invité </th>
                 <th className="px-3 py-2 rounded-tr-2xl">Table</th>
+                <th className="px-3 py-2">Invitation</th>
               </tr>
             </thead>
             <tbody>
               {tableOfGuest.map((guest, idx) => (
                 <tr key={guest.id} className={
-                  `border-b border-light-quaternary transition-colors duration-200 ${idx % 2 === 0 ? 'bg-light-secondary/60' : 'bg-white/60'} hover:bg-secondary/30 hover:text-[#6f3d2c]`
+                  ` transition-colors text-white duration-200 ${idx % 2 === 0 ? 'bg-light-secondary/60' : 'bg-white/40'} hover:bg-secondary/30 hover:text-white`
                 }>
                   <td className="px-3 py-2 font-semibold">{guest.id}</td>
                   <td className="px-3 py-2">{guest.guestName}</td>
                   <td className="px-3 py-2 font-bold text-primary">{guest.guestTable}</td>
+                  <td className="px-3 py-2">
+                    <a
+                      href={`/guest/${guest.id}`}
+                      rel="noopener noreferrer"
+                      className="inline-block px-4 py-1 rounded-lg bg-primary text-white  shadow hover:bg-secondary hover:text-[#6f3d2c] transition-colors duration-200 text-sm"
+                    >
+                      Voir invitation
+                    </a>
+                  </td>
                 </tr>
               ))}
             </tbody>

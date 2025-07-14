@@ -9,7 +9,7 @@ const blogPosts = [
     guestName: "Mr Jethro Muluba",
     guestQRCode: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752284016/Weeding%20Ya%20Djo/Location_QR_Code_j1afr2.png",
     guestCard: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752284355/Weeding%20Ya%20Djo/Card/Bottom_guest_Mr_Jethro_Muluba_blbl7s.png",
-    guestTable: "Patience"
+    guestTable: "Baseron"
   },
 
   {
