@@ -118,6 +118,20 @@ const blogPosts = [
         guestQRCode: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752284016/Weeding%20Ya%20Djo/Location_QR_Code_j1afr2.png",
         guestCard: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752451940/Weeding%20Ya%20Djo/Card/Table%20Mormon/Bottom_guestKubangila_hxlkv4.png",
         guestTable: "Mormon"
+    },
+    {
+        id: "6",
+        guestName: "Baseron (8 Personnes) ",
+        guestQRCode: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752284016/Weeding%20Ya%20Djo/Location_QR_Code_j1afr2.png",
+        guestCard: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752452559/Weeding%20Ya%20Djo/Card/Table%20Baseron/Bottom_guestBaseron_bka7dq.png",
+        guestTable: "Baseron"
+    },
+    {
+        id: "7",
+        guestName: "Maman Tshiely",
+        guestQRCode: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752284016/Weeding%20Ya%20Djo/Location_QR_Code_j1afr2.png",
+        guestCard: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752452559/Weeding%20Ya%20Djo/Card/Table%20Baseron/Bottom_guestMaman_Tshiel_p9iptm.png",
+        guestTable: "Baseron"
     }
 ];
 const BlogPostPage = async ({ params })=>{
@@ -132,7 +146,7 @@ const BlogPostPage = async ({ params })=>{
         getTemplate02: getTemplate02
     }, void 0, false, {
         fileName: "[project]/src/app/guest/[slug]/page.tsx",
-        lineNumber: 77,
+        lineNumber: 91,
         columnNumber: 10
     }, this);
 };

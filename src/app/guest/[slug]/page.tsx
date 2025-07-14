@@ -52,7 +52,21 @@ const blogPosts = [
     guestTable: "Mormon"
   },
 
+  {
+    id: "6",
+    guestName: "Baseron (8 Personnes) ",
+    guestQRCode: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752284016/Weeding%20Ya%20Djo/Location_QR_Code_j1afr2.png",
+    guestCard: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752452559/Weeding%20Ya%20Djo/Card/Table%20Baseron/Bottom_guestBaseron_bka7dq.png",
+    guestTable: "Baseron"
+  },
 
+  {
+    id: "7",
+    guestName: "Maman Tshiely",
+    guestQRCode: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752284016/Weeding%20Ya%20Djo/Location_QR_Code_j1afr2.png",
+    guestCard: "https://res.cloudinary.com/dr8ofciki/image/upload/v1752452559/Weeding%20Ya%20Djo/Card/Table%20Baseron/Bottom_guestMaman_Tshiel_p9iptm.png",
+    guestTable: "Baseron"
+  },
 ]
 
 // Données simulées pour les articles connexes
