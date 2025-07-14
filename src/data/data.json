@@ -870,12 +870,7 @@
     "contactForm" : [
     {
         "id" : 0,
-        "label" : "Nom",
-        "errorMessage" : "Name must have at least 3 letters"
-    },
-    {
-        "id" : 1,
-        "label" : "Prénom",
+        "label" : "Nom Complet",
         "errorMessage" : "Name must have at least 3 letters"
     },
 

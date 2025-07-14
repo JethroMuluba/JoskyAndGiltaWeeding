@@ -8,7 +8,6 @@ import data from '@/data/data.json'
 
 interface FormData extends Record<string, unknown> {
   name: string;
-  firstname: string;
   phone: string;
   email: string;
   message: string;
@@ -64,15 +63,9 @@ const ContactForm = () => {
                   onSubmit={handleSubmit(onSubmitForm)} className=' flex flex-col gap-[28px]'>
 
                     <div className=' w-full flex flex-col md:flex-row gap-8'>
-                      <div className='md:w-1/2 flex flex-col items-start  gap-2'>
+                      <div className='w-full flex flex-col items-start  gap-2'>
                           <label htmlFor="name" className=' text-base text-[#c49344]'> {formData[0].label} </label>
                           <input {...register("name", {required:true, minLength: 3, maxLength:60})} type="text" className=' bg-[#F2F2F2] h-[45px] opacity-10  px-5 w-[100%] text-[#000000] placeholder:text-[#OOOOOO] placeholder:opacity-80 outline-none appearance-none caret-[#3B4E6A] ' placeholder='Saissisez votre nom' />
-                          {errors.name && <span style={{color: '#DA5643', fontSize: '14px'}}>{formData[0].errorMessage}</span>}
-                      </div>
-
-                      <div className='md:w-1/2 flex flex-col items-start  gap-2'>
-                          <label htmlFor="firstname" className=' text-base text-[#c49344]'> {formData[1].label} </label>
-                          <input {...register("firstname", {required:true, minLength: 3, maxLength:60})} type="text" className=' bg-[#F2F2F2] h-[45px] opacity-10  px-5 w-[100%] text-[#000000] placeholder:text-[#OOOOOO] placeholder:opacity-80 outline-none appearance-none caret-[#3B4E6A] ' placeholder='Saisissez votre prénom' />
                           {errors.name && <span style={{color: '#DA5643', fontSize: '14px'}}>{formData[0].errorMessage}</span>}
                       </div>
                     </div>
@@ -131,7 +124,7 @@ const ContactForm = () => {
                                     )}
 
                     <div className='flex justify-center items-center gap-5 md:justify-start w-full '>
-                      <button type='submit' className=' w-full md:w-auto bg-[#c49344] hover:bg-[#9e793c] px-8 py-4  text-white cursor-pointer flex items-center gap-2 active:border-2 active:border-[#3B4E6A]'>{formData[5].buttonName}
+                      <button type='submit' className=' w-full md:w-auto bg-[#c49344] hover:bg-[#9e793c] px-8 py-4  text-white cursor-pointer flex items-center gap-2 active:border-2 active:border-[#3B4E6A]'>{formData[4].buttonName}
                       <SendHorizontal  className="w-5 h-5" />
                       </button>
                     </div>

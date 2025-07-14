@@ -387,44 +387,16 @@
     margin-top: calc(var(--spacing) * -16);
   }
 
-  .mt-6 {
-    margin-top: calc(var(--spacing) * 6);
-  }
-
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
-  }
-
-  .mt-100 {
-    margin-top: calc(var(--spacing) * 100);
   }
 
   .mt-150 {
     margin-top: calc(var(--spacing) * 150);
   }
 
-  .mt-200 {
-    margin-top: calc(var(--spacing) * 200);
-  }
-
-  .mt-1500 {
-    margin-top: calc(var(--spacing) * 1500);
-  }
-
-  .mt-2000 {
-    margin-top: calc(var(--spacing) * 2000);
-  }
-
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
-
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
-  }
-
-  .mb-6 {
-    margin-bottom: calc(var(--spacing) * 6);
   }
 
   .mb-7 {
@@ -463,10 +435,6 @@
     display: inline-flex;
   }
 
-  .table {
-    display: table;
-  }
-
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
@@ -481,10 +449,6 @@
 
   .h-11 {
     height: calc(var(--spacing) * 11);
-  }
-
-  .h-25 {
-    height: calc(var(--spacing) * 25);
   }
 
   .h-\[45px\] {
@@ -509,10 +473,6 @@
 
   .w-10 {
     width: calc(var(--spacing) * 10);
-  }
-
-  .w-25 {
-    width: calc(var(--spacing) * 25);
   }
 
   .w-\[100\%\], .w-full {
@@ -560,16 +520,8 @@
     flex-direction: column;
   }
 
-  .items-baseline {
-    align-items: baseline;
-  }
-
   .items-center {
     align-items: center;
-  }
-
-  .items-end {
-    align-items: flex-end;
   }
 
   .items-start {
@@ -641,11 +593,6 @@
     border-width: 1px;
   }
 
-  .border-b {
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 1px;
-  }
-
   .border-\[\#c49344\] {
     border-color: #c49344;
   }
@@ -674,20 +621,6 @@
     background-color: #c49344;
   }
 
-  .bg-white {
-    background-color: var(--color-white);
-  }
-
-  .bg-white\/0 {
-    background-color: #0000;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-white\/0 {
-      background-color: color-mix(in oklab, var(--color-white) 0%, transparent);
-    }
-  }
-
   .bg-white\/40 {
     background-color: #fff6;
   }
@@ -695,36 +628,6 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-white\/40 {
       background-color: color-mix(in oklab, var(--color-white) 40%, transparent);
-    }
-  }
-
-  .bg-white\/60 {
-    background-color: #fff9;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-white\/60 {
-      background-color: color-mix(in oklab, var(--color-white) 60%, transparent);
-    }
-  }
-
-  .bg-white\/70 {
-    background-color: #ffffffb3;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-white\/70 {
-      background-color: color-mix(in oklab, var(--color-white) 70%, transparent);
-    }
-  }
-
-  .bg-white\/80 {
-    background-color: #fffc;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-white\/80 {
-      background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
     }
   }
 
@@ -746,10 +649,6 @@
 
   .p-5 {
     padding: calc(var(--spacing) * 5);
-  }
-
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
   }
 
   .px-3 {
@@ -876,10 +775,6 @@
 
   .text-\[\#6f3d2c\] {
     color: #6f3d2c;
-  }
-
-  .text-\[\#b8860b\] {
-    color: #b8860b;
   }
 
   .text-\[\#c49344\] {
@@ -1013,12 +908,6 @@
   @media (hover: hover) {
     .hover\:text-\[\#6f3d2c\]:hover {
       color: #6f3d2c;
-    }
-  }
-
-  @media (hover: hover) {
-    .hover\:text-\[\#c49344\]:hover {
-      color: #c49344;
     }
   }
 
@@ -1537,42 +1426,6 @@ html, body {
 
 
 /* [next]/internal/font/google/playfair_display_9cc5b16d.module.css [app-client] (css) */
-@font-face {
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: 400 900;
-  font-display: swap;
-  src: url("../media/nuFiD_vYSZviVYUb_rj3ij__anPXDTjYgEM86xRbPQ-s.4b44f2b9.woff2") format("woff2");
-  unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116;
-}
-
-@font-face {
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: 400 900;
-  font-display: swap;
-  src: url("../media/nuFiD_vYSZviVYUb_rj3ij__anPXDTPYgEM86xRbPQ-s.390b23fc.woff2") format("woff2");
-  unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB;
-}
-
-@font-face {
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: 400 900;
-  font-display: swap;
-  src: url("../media/nuFiD_vYSZviVYUb_rj3ij__anPXDTLYgEM86xRbPQ-s.5aa3982d.woff2") format("woff2");
-  unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-@font-face {
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: 400 900;
-  font-display: swap;
-  src: url("../media/nuFiD_vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ-s.p.3ce64794.woff2") format("woff2");
-  unicode-range: U+??, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
 @font-face {
   font-family: Playfair Display Fallback;
   src: local(Times New Roman);
