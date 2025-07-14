@@ -3,8 +3,8 @@
 import React from 'react'
 import { motion, useInView} from 'framer-motion'
 import Image from "next/image"
-import { Download } from "lucide-react"
-import Link from "next/link"
+// import { Download } from "lucide-react"
+// import Link from "next/link"
 import { useRef } from 'react'
 import ContactForm from '@/components/contactForm'
 
@@ -152,11 +152,11 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
                   height={448}
                   className="w-25 h-25 object-cover rounded-lg transition-transform duration-600 hover:scale-110"
                 />
-
+{/* 
           <Link href={post.guestCard} target='blank' download className="bg-[#c49344] hover:bg-[#9e793c] px-6 py-2 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2 mb-10">
                 <span className='text-xs'>TELECHARGEZ ICI</span>
                 <Download  className="w-5 h-5 animate-bounce" />
-          </Link>
+          </Link> */}
         </motion.div>
 
 
