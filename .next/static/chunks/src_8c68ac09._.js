@@ -16,6 +16,9 @@ __turbopack_context__.s({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$data$2e$json__$28$json$29$__ = __turbopack_context__.i("[project]/src/data/data.json (json)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
 'use client';
 ;
 ;
@@ -758,7 +761,11 @@ const tableOfGuest = [
     }
 ];
 const Guest = ()=>{
+    _s();
+    const [search, setSearch] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
     const getCover = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$data$2e$json__$28$json$29$__["default"].home?.[0]?.heroSection?.[0]?.cover || "/placeholder.svg";
+    // Filtrage dynamique par nom d'invité
+    const filteredGuests = tableOfGuest.filter((guest)=>guest.guestName.toLowerCase().includes(search.toLowerCase()));
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
         className: "min-h-screen bg-[#6f3d2c] flex flex-col md:items-center",
         children: [
@@ -783,18 +790,75 @@ const Guest = ()=>{
                 }
             }, void 0, false, {
                 fileName: "[project]/src/app/guest/page.tsx",
-                lineNumber: 860,
+                lineNumber: 867,
                 columnNumber: 1
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "w-full max-w-2xl mx-auto mt-8  p-4 bg-[#6f3d2c] rounded-2xl shadow-lg border-light-quaternary backdrop-blur-md",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-3xl font-made-infinity font-bold mb-4 text-center text-[#c49344]  tracking-wide",
-                        children: "Liste des invités"
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-4",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                className: "text-3xl font-made-infinity font-bold text-[#c49344] tracking-wide text-center sm:text-left",
+                                children: "Liste des invités"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/guest/page.tsx",
+                                lineNumber: 879,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "relative w-full sm:w-72",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        type: "text",
+                                        placeholder: "Rechercher un invité...",
+                                        value: search,
+                                        onChange: (e)=>setSearch(e.target.value),
+                                        className: "w-full pl-10 pr-4 py-2 rounded-lg border border-light-quaternary bg-[#c49344] text-[#6f3d2c] placeholder:text-light-quaternary focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary transition"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/guest/page.tsx",
+                                        lineNumber: 881,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "absolute left-3 top-1/2 -translate-y-1/2 text-light-quaternary pointer-events-none",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                            xmlns: "http://www.w3.org/2000/svg",
+                                            className: "h-5 w-5",
+                                            fill: "none",
+                                            viewBox: "0 0 24 24",
+                                            stroke: "currentColor",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                strokeLinecap: "round",
+                                                strokeLinejoin: "round",
+                                                strokeWidth: 2,
+                                                d: "M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/guest/page.tsx",
+                                                lineNumber: 889,
+                                                columnNumber: 129
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/guest/page.tsx",
+                                            lineNumber: 889,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/guest/page.tsx",
+                                        lineNumber: 888,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/guest/page.tsx",
+                                lineNumber: 880,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/app/guest/page.tsx",
-                        lineNumber: 871,
+                        lineNumber: 878,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -811,7 +875,7 @@ const Guest = ()=>{
                                                 children: "ID"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/guest/page.tsx",
-                                                lineNumber: 876,
+                                                lineNumber: 897,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -819,7 +883,7 @@ const Guest = ()=>{
                                                 children: "Nom de l'invité "
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/guest/page.tsx",
-                                                lineNumber: 877,
+                                                lineNumber: 898,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -827,7 +891,7 @@ const Guest = ()=>{
                                                 children: "Table"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/guest/page.tsx",
-                                                lineNumber: 878,
+                                                lineNumber: 899,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -835,22 +899,22 @@ const Guest = ()=>{
                                                 children: "Invitation"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/guest/page.tsx",
-                                                lineNumber: 879,
+                                                lineNumber: 900,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/guest/page.tsx",
-                                        lineNumber: 875,
+                                        lineNumber: 896,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/page.tsx",
-                                    lineNumber: 874,
+                                    lineNumber: 895,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
-                                    children: tableOfGuest.map((guest, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                    children: filteredGuests.map((guest, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                             className: ` transition-colors text-white text-[14px] duration-200 ${idx % 2 === 0 ? 'bg-light-secondary/60' : 'bg-white/40'} hover:bg-secondary/30 hover:text-white`,
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -858,7 +922,7 @@ const Guest = ()=>{
                                                     children: guest.id
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/guest/page.tsx",
-                                                    lineNumber: 887,
+                                                    lineNumber: 908,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -866,7 +930,7 @@ const Guest = ()=>{
                                                     children: guest.guestName
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/guest/page.tsx",
-                                                    lineNumber: 888,
+                                                    lineNumber: 909,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -874,7 +938,7 @@ const Guest = ()=>{
                                                     children: guest.guestTable
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/guest/page.tsx",
-                                                    lineNumber: 889,
+                                                    lineNumber: 910,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -886,49 +950,50 @@ const Guest = ()=>{
                                                         children: "Voir invitation"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/guest/page.tsx",
-                                                        lineNumber: 891,
+                                                        lineNumber: 912,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/guest/page.tsx",
-                                                    lineNumber: 890,
+                                                    lineNumber: 911,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, guest.id, true, {
                                             fileName: "[project]/src/app/guest/page.tsx",
-                                            lineNumber: 884,
+                                            lineNumber: 905,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/guest/page.tsx",
-                                    lineNumber: 882,
+                                    lineNumber: 903,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/guest/page.tsx",
-                            lineNumber: 873,
+                            lineNumber: 894,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/guest/page.tsx",
-                        lineNumber: 872,
+                        lineNumber: 893,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/guest/page.tsx",
-                lineNumber: 870,
+                lineNumber: 877,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/guest/page.tsx",
-        lineNumber: 858,
+        lineNumber: 865,
         columnNumber: 5
     }, this);
 };
+_s(Guest, "xMSft3/sbCidYXUzqinUsZIh+qY=");
 _c = Guest;
 const __TURBOPACK__default__export__ = Guest;
 var _c;
