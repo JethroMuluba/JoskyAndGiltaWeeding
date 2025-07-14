@@ -763,7 +763,7 @@ const Guest = ()=>{
     const [search, setSearch] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     const getCover = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$data$2e$json__$28$json$29$__["default"].home?.[0]?.heroSection?.[0]?.cover || "/placeholder.svg";
     // Filtrage dynamique par nom d'invité
-    const filteredGuests = tableOfGuest.filter((guest)=>guest.guestName.toLowerCase().includes(search.toLowerCase()));
+    const filteredGuests = tableOfGuest.filter((guest)=>guest.guestName.toLowerCase().includes(search.toLowerCase()) || guest.guestTable.toLowerCase().includes(search.toLowerCase()));
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
         className: "min-h-screen bg-[#6f3d2c] flex flex-col md:items-center",
         children: [

@@ -858,7 +858,7 @@ const Guest = () => {
 
   // Filtrage dynamique par nom d'invité
   const filteredGuests = tableOfGuest.filter(guest =>
-    guest.guestName.toLowerCase().includes(search.toLowerCase())
+    guest.guestName.toLowerCase().includes(search.toLowerCase()) || guest.guestTable.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
