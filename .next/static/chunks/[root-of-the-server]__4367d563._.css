@@ -73,6 +73,7 @@
     --radius-lg: .5rem;
     --radius-2xl: 1rem;
     --ease-out: cubic-bezier(0, 0, .2, 1);
+    --animate-pulse: pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;
     --animate-bounce: bounce 1s infinite;
     --blur-md: 12px;
     --default-transition-duration: .15s;
@@ -506,6 +507,10 @@
 
   .animate-bounce {
     animation: var(--animate-bounce);
+  }
+
+  .animate-pulse {
+    animation: var(--animate-pulse);
   }
 
   .cursor-pointer {
@@ -1064,6 +1069,16 @@ html, body {
   overflow-x: hidden;
 }
 
+@keyframes fall-heart {
+  0% {
+    transform: translateY(0)rotate(-10deg);
+  }
+
+  100% {
+    transform: translateY(100vh)rotate(20deg);
+  }
+}
+
 .poppins-thin {
   font-family: Poppins, sans-serif;
   font-style: normal;
@@ -1410,6 +1425,12 @@ html, body {
   syntax: "*";
   inherits: false;
   initial-value: 1;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
 }
 
 @keyframes bounce {
