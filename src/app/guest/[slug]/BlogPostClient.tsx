@@ -184,7 +184,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02,  }: BlogPostClient
             onClick={handleDownloadPng}
             className="bg-[#c49344] hover:bg-[#9e793c] active:border-[#3B4E6A] active:border-2 px-6 py-2 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2 mb-10"
           >
-            <span className='text-xs'>TÉLÉCHARGER EN PNG</span>
+            <span className='text-xs'>TÉLÉCHARGER EN ICI</span>
             <Download className="w-5 h-5 animate-bounce" />
           </button>
         </motion.div>
