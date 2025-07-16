@@ -162,7 +162,7 @@ const ContactForm = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     htmlFor: "phone",
                                                     className: " text-base text-[#c49344]",
-                                                    children: formData[2].label
+                                                    children: formData[1].label
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/contactForm.tsx",
                                                     lineNumber: 77,
@@ -203,7 +203,7 @@ const ContactForm = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     htmlFor: "email",
                                                     className: " text-base text-[#c49344]",
-                                                    children: formData[3].label
+                                                    children: formData[2].label
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/contactForm.tsx",
                                                     lineNumber: 83,
@@ -252,7 +252,7 @@ const ContactForm = ()=>{
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                             htmlFor: "message",
                                             className: " text-base text-[#c49344]",
-                                            children: formData[4].label
+                                            children: formData[3].label
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/contactForm.tsx",
                                             lineNumber: 90,
@@ -536,7 +536,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
         margin: "-100px"
     });
     const handleDownloadPng = async ()=>{
-        const section = document.querySelector('section:nth-child(2)');
+        const section = document.querySelector('section:nth-child(3)');
         if (section) {
             // Masquer le bouton avant capture
             const btn = section.querySelector('button');
@@ -889,7 +889,7 @@ const BlogPostClient = ({ post, getTemplate01, getTemplate02 })=>{
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     onClick: handleDownloadPng,
-                                    className: "bg-[#c49344] hover:bg-[#9e793c] px-6 py-2 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2 mb-10",
+                                    className: "bg-[#c49344] hover:bg-[#9e793c] active:border-[#3B4E6A] active:border-2 px-6 py-2 rounded-lg font-normal text-white cursor-pointer flex items-center gap-2 mb-10",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "text-xs",

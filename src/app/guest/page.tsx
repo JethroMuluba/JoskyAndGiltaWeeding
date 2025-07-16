@@ -1660,7 +1660,7 @@ const Guest = () => {
               onChange={e => setSearch(e.target.value)}
               className="w-full pl-10 pr-4 py-2 rounded-lg border border-light-quaternary bg-[#c49344] text-[#6f3d2c] placeholder:text-light-quaternary focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary transition"
             />
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-light-quaternary pointer-events-none">
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-light-quaternary opacity-20 pointer-events-none">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" /></svg>
             </span>
           </div>
@@ -1687,7 +1687,7 @@ const Guest = () => {
                     <a
                       href={`/guest/${guest.id}`}
                       rel="noopener noreferrer"
-                      className="inline-block px-4 py-1  rounded-lg bg-primary text-white  shadow hover:bg-secondary hover:text-[#6f3d2c] transition-colors duration-200 text-sm"
+                      className="inline-block px-4 py-1  rounded-lg bg-primary text-white  shadow hover:bg-secondary hover:text-[#c49344] transition-colors duration-200 text-sm"
                     >
                       Voir invitation
                     </a>
